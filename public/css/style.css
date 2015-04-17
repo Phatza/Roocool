@@ -1,0 +1,150 @@
+body{
+	background-image:url("../img/nuage.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#centre{
+	padding:0px 150px;
+	position: relative;
+}
+#header{
+	height:50px;
+	width:100%;
+	background-color:#FFFFFF;
+	border-left:1px solid #222;
+	border-right:1px solid #222;
+}
+#header li{
+	display:inline-block;
+	float: left;
+}
+#logo img{
+	height:40px;
+	width:auto;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+#navbar{
+	float:right;
+}
+#appli {
+	max-width: 100%;
+	background-color:white;
+	border: solid black 1px;
+	border-radius:6px;
+	margin-top: 10px;
+}
+.navbar-inverse .navbar-brand{
+	font-size: 25px;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: #9D9D9D;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #000;
+}
+.navbar-toggle {
+	background-color:#222;
+}
+#tweet{
+	padding:5px 15px;
+	background-color: #BFD7F1;
+	border-bottom: 1px grey solid;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#comment{
+	width:100%;
+}
+.pseudo{
+	color:#085d89;
+	font-weight: bold;
+}
+#sub{
+	background-color: #085D89;
+	margin-left:-5px;
+	color:#ffffff;
+	font-weight: bold;
+}
+#sub:hover{
+	background-color: #046380;
+}
+#result{
+	font-size: 18px;
+}
+.roocool .disp{
+	display: inline-block;
+}
+.blocc{
+	border-bottom: 1px grey solid;
+	padding:5px 15px;
+}
+.rooc{
+	margin-left: 2.5%;
+	margin-top: 2.5%;
+	width:75%;
+}
+.profil{
+	width:100px;
+	height:100px;
+	border: solid 2px grey;
+	border-radius: 6px;	
+}
+.profil img{
+	width:100%;
+}
+#tips{
+	border: none;
+	background-color: transparent;
+	margin-left: 50%;
+}
+#option{
+	height:70px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+#option form{
+	display: inline-block;
+}
+.killo{
+	float: right;
+}
+#result{
+	background-color: rgba(170, 210, 250, 0.2);
+}
+@media (min-width: 769px) and (max-width:1000px) {
+	#sub{
+		font-size: 10px;
+	}
+}
+@media (max-width: 768px) {
+  	#centre{
+  		padding:0px;
+  	}
+  	#result{
+		font-size: 14px;
+	}
+	.profil{
+		width:75px;
+		height:75px;
+}
+}

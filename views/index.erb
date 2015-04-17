@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    	<link href="css/style.css" rel="stylesheet">
+ 	</head>
+ 	<div id="tweet">
+		<form action="/dones" method="post" class="row">
+			<div class="col-xs-10 col-md-3">
+			<div class="input-group">
+  				<span class="input-group-addon">@</span>
+				<input type="text" name="pseudo" placeholder="Votre pseudo" class="form-control">
+			</div>
+			</div>
+			<div class="col-xs-10 col-md-7">
+		<input id="comment" class="form-control" type="text" name="message" placeholder="Quoi de neuf ?" maxlength="140"></div>
+		<button id="sub" class="col-xs-2 col-md-2 btn btn-default" type="submit">Roocoolez !</button>
+</form>
+</div>
+<div id="result">
+	<% @datas.each do |d| %>
+	<div class="blocc">
+	<div class="roocool">
+	<div class="profil disp"><img src="img/profil.jpg"></div>
+	<div class="rooc disp">
+ 		<p><span class="pseudo">@<%= d.pseudo %></span> :<br><%= d.message %></p>
+ 	</div>
+ 	</div>
+ 	<div id="roofoot">
+ 	<button id="tips" type="button" class="btn btn-lg collapsed" data-toggle="collapse" data-target="#option" aria-label="Left Align" title="Options">
+  <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+</button>
+		<div id="option" class="collapse">
+		<form class="col-xs-10 col-md-7" action="/<%= d.id%>" method="post">
+ 			<input type="hidden" name="_method" value="put">
+ 			<input type="text" name="message" value="<%= d.message %>" placeholder="Edit Tweet">
+			<button class="btn btn-warning">Edit</button>
+ 		</form>
+		<form class="killo" action="/<%= d.id %>" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<button class="btn btn-danger">Delete</button>
+		</form>
+		</div>
+	</div>
+	</div>
+	<% end %>
+</div>
+
