@@ -30,16 +30,16 @@
  	</div>
  	</div>
  	<div id="roofoot">
- 	<button id="tips" type="button" class="btn btn-lg collapsed" data-toggle="collapse" data-target="#option" aria-label="Left Align" title="Options">
-  <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
-</button>
+ 	<button id="tips" type="submit" class="btn btn-lg collapsed" data-toggle="collapse" data-target="#option" aria-label="Left Align" title="Options">
+  	<span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+	</button>
 		<div id="option" class="collapse">
-		<form class="col-xs-10 col-md-7" action="/<%= d.id%>" method="post">
+		<form class="col-xs-10 col-md-7" action="index/<%= d.id%>" method="post">
  			<input type="hidden" name="_method" value="put">
  			<input type="text" name="message" value="<%= d.message %>" placeholder="Edit Tweet">
 			<button class="btn btn-warning">Edit</button>
  		</form>
-		<form class="killo" action="/<%= d.id %>" method="post">
+		<form class="killo" action="index/<%= d.id %>" method="post">
 			<input type="hidden" name="_method" value="delete">
 			<button class="btn btn-danger">Delete</button>
 		</form>

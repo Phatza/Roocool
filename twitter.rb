@@ -33,10 +33,3 @@ delete '/:id' do
 end
 
 
-get '/finder' do
-	donnees = Dones.find(params[:message])
-	erb :finder
-end
-
-
-
